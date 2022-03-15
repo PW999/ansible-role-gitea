@@ -1,4 +1,4 @@
-[![Ansible Galaxy](https://raw.githubusercontent.com/roles-ansible/ansible_role_gitea/main/.github/galaxy.svg?sanitize=true)](https://galaxy.ansible.com/do1jlr/gitea) [![MIT License](https://raw.githubusercontent.com/roles-ansible/ansible_role_gitea/main/.github/license.svg?sanitize=true)](https://github.com/roles-ansible/ansible_role_gitea/blob/main/LICENSE)
+[![Ansible Galaxy](https://raw.githubusercontent.com/roles-ansible/ansible_role_gitea/main/.github/galaxy.svg?sanitize=true)](https://galaxy.ansible.com/neoloc/gitea) [![MIT License](https://raw.githubusercontent.com/roles-ansible/ansible_role_gitea/main/.github/license.svg?sanitize=true)](https://github.com/roles-ansible/ansible_role_gitea/blob/main/LICENSE)
 
  ansible role gitea
 ===================
@@ -11,12 +11,12 @@ This role installs and manages [gitea](https://gitea.io) - Git with a cup of tea
 The following code has been tested with the latest Debian Stable, it should work on Ubuntu and RedHat as well.
 
 ```yaml
-# ansible-galaxy install do1jlr.gitea
+# ansible-galaxy install neoloc.gitea
 
 - name: "Install gitea"
   hosts: git.example.com
   roles:
-    - {role: do1jlr.gitea, tags: gitea}
+    - {role: neoloc.gitea, tags: gitea}
   vars:
     # Here we assume we are behind a reverse proxy that will
     # handle https for us, so we bind on localhost:3000 using HTTP
