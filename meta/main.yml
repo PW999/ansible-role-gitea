@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: gitea
-  author: do1jlr
+  author: neoloc
   description: Ansible role to configure and deploy gitea, a painless self-hosted Git service.
   license: "BSD-3-Clause"
   min_ansible_version: 2.11
