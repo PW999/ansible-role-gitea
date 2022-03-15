@@ -1,5 +1,7 @@
 ---
 # gitea version
+gitea_configure: false
+
 # Use 'latest' to auto-update; upgrading past role version may lead to errors.
 gitea_version: '1.16.0'
 gitea_version_check: true
