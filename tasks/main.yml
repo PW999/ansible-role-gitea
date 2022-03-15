@@ -1,8 +1,10 @@
 ---
 - name: gitea role installation
+  when: gitea_configure == true
+  tags:
+    - git
+    - gitea
   block:
-  when: gitea_configure
-  tags: gitea
     - name: perform optional versionscheck
       ansible.builtin.include_tasks: versioncheck.yml
       when: submodules_versioncheck|bool
