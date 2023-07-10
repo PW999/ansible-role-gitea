@@ -16,5 +16,6 @@
     - "{{ gitea_custom }}/mailer"
     - "{{ gitea_home }}/indexers"
     - "{{ gitea_home }}/log"
+    - "{{ gitea_home }}/queues"
     - "{{ gitea_repository_root }}"
     - "{{ gitea_lfs_content_path }}"

@@ -79,7 +79,6 @@ LOG_SQL  = {{ gitea_db_log_sql | ternary('true', 'false') }}
 ; -> https://docs.gitea.io/en-us/config-cheat-sheet/#indexer-indexer
 [indexer]
 ISSUE_INDEXER_PATH            = {{ gitea_home }}/indexers/issues.bleve
-ISSUE_INDEXER_QUEUE_DIR       = {{ gitea_home }}/indexers/issues.queue
 REPO_INDEXER_ENABLED          = {{ gitea_repo_indexer_enabled | ternary('true', 'false') }}
 REPO_INDEXER_PATH             = {{ gitea_home }}/indexers/repos.bleve
 REPO_INDEXER_INCLUDE          = {{ gitea_repo_indexer_include }}
@@ -87,6 +86,13 @@ REPO_INDEXER_EXCLUDE          = {{ gitea_repo_indexer_exclude }}
 REPO_INDEXER_EXCLUDE_VENDORED = {{ gitea_repo_exclude_vendored | ternary('true', 'false') }}
 MAX_FILE_SIZE                 = {{ gitea_repo_indexer_max_file_size }}
 {{ gitea_indexer_extra_config }}
+;
+;
+; -> https://docs.gitea.com/administration/config-cheat-sheet?_highlight=issue_indexer#queue-queue-and-queue
+[queue]
+TYPE                           = persistable-channel
+DATADIR                        = {{ gitea_home }}/queues
+{{ gitea_queue_extra_config }}
 ;
 ;
 ; -> https://docs.gitea.io/en-us/config-cheat-sheet/#security-security

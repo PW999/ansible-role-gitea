@@ -142,6 +142,9 @@ gitea_oauth2_enabled: true
 gitea_oauth2_jwt_secret: ''
 gitea_oauth2_extra_config: ''
 
+# Queue (queue)
+gitea_queue_extra_config: ''
+
 # additional gitea config
 gitea_extra_config: ""
 
